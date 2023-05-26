@@ -1,0 +1,7 @@
+version: '3'
+services:
+  nginx-api-gateway:
+    image: nginx
+    container_name: nginx-api-gateway
+    ports:
+      - "3301:80"
