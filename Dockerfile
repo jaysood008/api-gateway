@@ -5,7 +5,7 @@ RUN nginx -v
 RUN mkdir -p /home/app
 
 # Copy the Nginx config
-COPY . /home/app
+COPY . etc/nginx
 
 # Expose the port for access
 EXPOSE 80/tcp
