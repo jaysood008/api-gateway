@@ -1,7 +1,28 @@
 version: '3'
 services:
   nginx-api-gateway:
-    image: nginx
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: nginx-api-gateway
     container_name: nginx-api-gateway
     ports:
       - "3301:80"
+    networks:
+      - network-gateway-bridge
+    depends_on:
+      - "virtual-decimal"
+  virtual-decimal:
+    image: virtual-decimal
+    container_name: virtual-decimal
+    build:
+      dockerfile: Dockerfile
+      context: ./virtual-decimal
+    ports:
+      - "5000:5204"
+    networks:
+      - network-gateway-bridge
+networks:
+  network-gateway-bridge:
+    driver: bridge
+    
