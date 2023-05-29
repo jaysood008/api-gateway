@@ -19,9 +19,10 @@ services:
       dockerfile: Dockerfile
       context: ./virtual-decimal
     ports:
-      - "5000:5205"
+      - "5000:5204"
     networks:
       - network-gateway-bridge
 networks:
   network-gateway-bridge:
     driver: bridge
+    
