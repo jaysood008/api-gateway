@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
       context: ./virtual-decimal
     ports:
-      - "5000:5204"
+      - "5000:5205"
     networks:
       - network-gateway-bridge
 networks:
