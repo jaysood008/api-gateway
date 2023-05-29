@@ -1,0 +1,18 @@
+# Ignore log files
+*.log
+
+# Ignore Docker files
+Dockerfile
+docker-compose.yml
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore other folders
+virtual-decimal/
+
+# Ignore package lock file
+package-lock.json
+
+# Ignore readme files
+README.md
